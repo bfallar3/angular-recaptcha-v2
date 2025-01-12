@@ -1,0 +1,11 @@
+<h1>Angular 17 reCaptcha v2 Demo</h1>
+<re-captcha (resolved)="resolved($event!)" [siteKey]="RECAPTCHA_SITE_KEY"></re-captcha>
+<div>
+    <textarea disabled rows="10" style="width: 90%;" [textContent]="token"></textarea>
+</div>
+<div>
+    <button class="submit-button" [disabled]="!canSubmit" (click)="submit()">Submit Form</button>
+</div>
+<div>
+    {{ message }}
+</div>
